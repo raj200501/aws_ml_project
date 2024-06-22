@@ -7,19 +7,23 @@ This repository contains the projects and tasks performed at the Hume Center & A
 - **data**: Contains sample data.
 - **models**: Contains pre-trained models.
 - **src**: Contains source code for various components.
-  - **cpp**: C++ code for data preprocessing.
+  - **cpp**: C++ code for data preprocessing, analysis, and machine learning.
   - **python**: Python code for training and testing models, preprocessing data, and utility functions.
   - **aws_integration**: Python code for deploying and invoking models on AWS SageMaker.
 
-## How to Run
+## How to Build and Run
 
 ### Prerequisites
 
-- Docker
-- Python 3.8+
-- AWS CLI configured
+- CMake
+- GCC or Clang
 
-### Build Docker Image
+### Build C++ Code
 
 ```sh
-docker build -t aws-ml-project .
+cd src/cpp
+mkdir build
+cd build
+cmake ..
+make
+./aws_ml_project
